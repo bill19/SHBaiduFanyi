@@ -31,7 +31,7 @@
      */
     NSString *baseUrl = @"https://api.fanyi.baidu.com/api/trans/vip/translate?";
     NSString *randomStr = [[@"20180529000168870apple15ixI4SXJK5AC6fQmcMpa9" MD5Hash] lowercaseString];
-    
+
     NSString *base2Url = [NSString stringWithFormat:@"%@q=%@&from=auto&to=zh&appid=20180529000168870&salt=15&sign=%@",baseUrl,@"apple",randomStr];
     AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
     [mgr GET:base2Url parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
